@@ -1,4 +1,4 @@
-Employee Management Application
+#Employee Management Application
 This is a web-based employee management application built using HTML, CSS, and plain JavaScript. It allows users to register new employees and manage existing ones.
 
 Installation
