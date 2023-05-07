@@ -1,147 +1,59 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Employee Management System</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			font-family: Arial, sans-serif;
-		}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header Component -->
+    <header>
+      <div class="logo">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM8VJ6AayHyDZknH72G1rlWsC-YaVDnxz9LEjr2H-18cWI90vtGL66bR0xAMHqrj0qcGM&usqp=CAU" height="50px" width="50px" alt="Company Logo" />
+      </div>
+      <div class="header-right">
+        <form class="search-form">
+          <input type="text" placeholder="Search Employee" />
+          <button type="submit">Search</button>
+        </form>
+        <nav class="nav-menu">
+          <ul>
+            <li><a href="employee-registration.html">Employee Registration</a></li>
+            <li><a href="employee-listing.html">Employee Listing</a></li>
+          </ul>
+        </nav>
+        <button class="hamburger-menu">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </div>
+    </header>
 
-		header {
-			background-color: #333;
-			color: #fff;
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			padding: 10px;
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			z-index: 999;
-		}
+    <!-- Employee Registration Page Component -->
+    <main>
+      <div class="registration-container">
+        <h1>Employee Registration</h1>
+        <form class="registration-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="position">Position:</label>
+          <input type="text" id="position" name="position" required />
+          <label for="about">About:</label>
+          <textarea id="about" name="about" required></textarea>
+          <label for="joining-date">Joining Date:</label>
+          <input type="date" id="joining-date" name="joining-date" required />
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </main>
 
-		.logo {
-			font-size: 24px;
-			font-weight: bold;
-			margin: 0;
-			padding: 0;
-			flex: 1;
-		}
+    <!-- Footer Component -->
+    <footer>
+      <p>&copy; 2023 Arshi Verma</p>
+    </footer>
 
-		.search {
-			display: flex;
-			flex: 2;
-			align-items: center;
-			justify-content: flex-end;
-		}
-
-		.search input[type="text"] {
-			padding: 8px;
-			border-radius: 4px;
-			border: none;
-			margin-right: 10px;
-			font-size: 16px;
-		}
-
-		.nav-menu {
-			display: flex;
-			align-items: center;
-			justify-content: flex-end;
-		}
-
-		.nav-menu ul {
-			list-style: none;
-			margin: 0;
-			padding: 0;
-			display: flex;
-		}
-
-		.nav-menu li {
-			margin: 0 10px;
-		}
-
-		.nav-menu a {
-			color: #fff;
-			text-decoration: none;
-			font-size: 16px;
-			padding: 8px;
-			border-radius: 4px;
-			transition: all 0.3s ease;
-		}
-
-		.nav-menu a:hover {
-			background-color: #fff;
-			color: #333;
-		}
-
-		.menu-icon {
-			display: none;
-			font-size: 24px;
-			cursor: pointer;
-		}
-
-		@media screen and (max-width: 768px) {
-			.menu-icon {
-				display: block;
-			}
-
-			.nav-menu {
-				display: none;
-				position: absolute;
-				top: 60px;
-				right: 0;
-				background-color: #333;
-				padding: 10px;
-				border-radius: 4px;
-			}
-
-			.nav-menu ul {
-				flex-direction: column;
-			}
-
-			.nav-menu li {
-				margin: 10px 0;
-			}
-
-			.nav-menu a {
-				display: block;
-				padding: 10px 0;
-			}
-
-			.show {
-				display: block;
-			}
-		}
-
-		main {
-			padding: 100px 0 60px;
-			min-height: calc(100vh - 240px);
-		}
-
-		footer {
-			background-color: #333;
-			color: #fff;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			padding: 10px;
-			position: fixed;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			z-index: 999;
-		}
-
-		.employee-form {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			margin: 50px auto;
-			max-width: 500px;
-			padding: 20
-    }
+    <script src="script.js"></script>
+  </body>
+</html>
