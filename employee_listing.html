@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Employee Listing</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		header {
+			background-color: #333;
+			color: #fff;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 10px;
+			justify-content: space-between;
+		}
+		nav {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-end;
+		}
+		nav ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: flex-end;
+		}
+		nav li {
+			margin: 0 10px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+		nav li:hover {
+			color: #ccc;
+		}
+		nav .hamburger {
+			display: none;
+			cursor: pointer;
+			font-size: 20px;
+		}
+		nav .hamburger:hover {
+			color: #ccc;
+		}
+		@media screen and (max-width: 600px) {
+			nav {
+				display: none;
+			}
+			nav .hamburger {
+				display: block;
+			}
+			nav ul {
+				flex-direction: column;
+				position: absolute;
+				top: 100%;
+				right: 0;
+				background-color: #333;
+				margin: 0;
+				padding: 10px;
+				width: 100%;
+				text-align: right;
+			}
+			nav li {
+				display: block;
+				margin: 5px 0;
+			}
+		}
+		main {
+			padding: 20px;
+			margin: auto;
+			max-width: 800px;
+		}
+		h1 {
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+		form {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 20px;
+		}
+		label {
+			margin-bottom: 10px;
+			font-size: 16px;
+		}
+		input[type="text"], textarea, input[type="date"] {
+			font-size: 16px;
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0 0 2px #ccc;
+			resize: none;
+		}
+		input[type="date"]::-webkit-calendar-picker-indicator {
+			position: relative;
+			top: 2px;
+			right: 2px;
+			color: #333;
+		}
+		input[type="submit"] {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			font-size: 16px;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+		input[type="submit"]:hover {
+			background-color: #666;
+		}
+		table {
+			border-collapse: collapse;
+			width: 100%;
+      			margin-bottom: 20px;
+		}
+		th, td {
+			padding: 10px;
+			text-align: left;
+			border-bottom: 1px solid #ccc;
+		}
+		th {
+			background-color: #333;
+			color: #fff;
+			font-size: 16px;
+			font-weight: normal;
+		}
+		td:nth-child(1) {
+			width: 20%;
+		}
+		td:nth-child(2) {
+			width: 20%;
+		}
+		td:nth-child(3) {
+			width: 50%;
+		}
+		td:nth-child(4) {
+			width: 10%;
+		}
+		button {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+			font-size: 16px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s;
+		}
+		button:hover {
+			background-color: #666;
+		}
+		footer {
+			background-color: #333;
+			color: #fff;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			padding: 10px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+		footer span {
+			font-size: 16px;
+			margin-left: 10px;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<div>
+			<img src="logo.png" alt="Logo">
+		</div>
+		<nav>
+			<input type="text" placeholder="Search...">
+			<span class="hamburger">&#9776;</span>
+			<ul>
+				<li><a href="#">Employee Registration</a></li>
+				<li><a href="#">Employee Listing</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1>Employee Listing</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Position</th>
+					<th>About</th>
+					<th>Joining Date</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- Employee data goes here -->
+			</tbody>
+		</table>
+		<div>
+			<button>Previous</button>
+			<button>Next</button>
+		</div>
+	</main>
+	<footer>
+		&copy; 2023 Arshi Verma<span>Employee Listing App</span>
+	</footer>
+</body>
+</html>
