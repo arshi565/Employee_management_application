@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Employee Registration System</title>
+	<!-- Link to your custom stylesheet -->
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<!-- Header component -->
+	<header>
+		<div class="logo">Your Logo</div>
+		<form class="search-bar">
+			<input type="text" placeholder="Search Employee by Name...">
+			<button type="submit">Search</button>
+		</form>
+		<nav class="navigation">
+			<!-- Hamburger menu icon for small screens -->
+			<span class="menu-icon">&#9776;</span>
+			<ul>
+				<li><a href="employee-registration.html">Employee Registration</a></li>
+				<li><a href="employee-listing.html">Employee Listing</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<!-- Employee Registration Page -->
+	<main class="employee-registration-page">
+		<h1>Employee Registration</h1>
+		<form id="employee-form">
+			<label for="employee-name">Name*</label>
+			<input type="text" id="employee-name" required>
+			<label for="employee-position">Position*</label>
+			<input type="text" id="employee-position" required>
+			<label for="employee-about">About*</label>
+			<textarea id="employee-about" required></textarea>
+			<label for="employee-joining-date">Joining Date*</label>
+			<input type="date" id="employee-joining-date" required>
+			<button type="submit">Submit</button>
+		</form>
+	</main>
+	
+	<!-- Employee Listing Page -->
+	<main class="employee-listing-page">
+		<h1>Employee Listing</h1>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Position</th>
+					<th>About</th>
+					<th>Joining Date</th>
+					<th>Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- Employee data will be displayed here -->
+			</tbody>
+		</table>
+		<div class="pagination">
+			<!-- Pagination links will be displayed here -->
+		</div>
+	</main>
+	
+	<!-- Footer component -->
+	<footer>
+		<p>&copy; Your Name</p>
+	</footer>
+	
+	<!-- JavaScript code to handle form submission and pagination -->
+	<script>
+		// TODO: Add JavaScript code
+	</script>
+</body>
+</html>
