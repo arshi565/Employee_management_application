@@ -1,0 +1,144 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+.logo img {
+  max-height: 50px;
+}
+
+.search-form input[type="text"] {
+  width: 200px;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
+
+.search-form button {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #333;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  padding: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.nav-menu ul {
+  list-style: none;
+}
+
+.nav-menu ul li {
+  margin-bottom: 0.5rem;
+}
+
+.nav-menu ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.nav-menu ul li a:hover {
+  background-color: #444;
+}
+
+.hamburger-menu {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger-menu span {
+  display: block;
+  height: 2px;
+  width: 20px;
+  background-color: #fff;
+  margin: 0.25rem 0;
+}
+
+@media screen and (max-width: 768px) {
+  .search-form input[type="text"] {
+    width: 100%;
+  }
+
+  .header-right {
+    position: relative;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    background-color: #333;
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  .nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-menu ul li {
+    margin-bottom: 1rem;
+  }
+
+  .nav-menu ul li a {
+    display: block;
+    padding: 0.5rem;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .nav-menu ul li a:hover {
+    background-color: #444;
+  }
+
+  .hamburger-menu
