@@ -1,15 +1,16 @@
-/* Reset */
+/* Reset default browser styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Global styles */
+/* Body styles */
 body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
+  background-color: #f8f8f8;
 }
 
 /* Header styles */
@@ -17,128 +18,135 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
+  background-color: #fff;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .logo img {
-  max-height: 50px;
+  height: 50px;
+  width: 50px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
 }
 
 .search-form input[type="text"] {
-  width: 200px;
-  margin-right: 0.5rem;
-  padding: 0.5rem;
-  border: none;
-  border-radius: 0.25rem;
-  font-size: 1rem;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+  font-size: 14px;
 }
 
-.search-form button {
-  background-color: #fff;
-  color: #333;
+.search-form button[type="submit"] {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: #fff;
   border: none;
-  border-radius: 0.25rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
+  border-radius: 3px;
   cursor: pointer;
+  font-size: 14px;
 }
 
-.nav-menu {
+nav.nav-menu {
+  margin-left: 20px;
+}
+
+nav.nav-menu ul {
   display: flex;
-  flex-direction: column;
-  background-color: #333;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 100%;
-  padding: 1rem;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
-}
-
-.nav-menu ul {
   list-style: none;
 }
 
-.nav-menu ul li {
-  margin-bottom: 0.5rem;
+nav.nav-menu ul li:not(:last-child) {
+  margin-right: 20px;
 }
 
-.nav-menu ul li a {
-  display: block;
-  padding: 0.5rem 1rem;
-  color: #fff;
+nav.nav-menu ul li a {
   text-decoration: none;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.nav-menu ul li a:hover {
-  background-color: #444;
+  color: #333;
 }
 
 .hamburger-menu {
   display: none;
-  background-color: transparent;
   border: none;
+  background-color: transparent;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 5px;
 }
 
-.hamburger-menu span {
+.hamburger-menu .line {
   display: block;
   height: 2px;
   width: 20px;
-  background-color: #fff;
-  margin: 0.25rem 0;
+  background-color: #333;
+  margin-bottom: 3px;
+  border-radius: 2px;
 }
 
-@media screen and (max-width: 768px) {
-  .search-form input[type="text"] {
-    width: 100%;
-  }
-
+@media only screen and (max-width: 600px) {
   .header-right {
-    position: relative;
+    display: none;
   }
 
-  .nav-menu {
+  .hamburger-menu {
+    display: block;
+  }
+
+  nav.nav-menu {
+    display: none;
     position: absolute;
-    top: 100%;
-    right: 0;
+    top: 40px;
+    left: 0;
+    background-color: #fff;
+    padding: 10px;
     width: 100%;
-    padding: 1rem;
-    background-color: #333;
-    transition: max-height 0.3s ease-in-out;
-    max-height: 0;
-    overflow: hidden;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
   }
 
-  .nav-menu ul {
-    display: flex;
+  nav.nav-menu ul {
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    margin: 0;
-    padding: 0;
   }
 
-  .nav-menu ul li {
-    margin-bottom: 1rem;
+  nav.nav-menu ul li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 10px;
   }
 
-  .nav-menu ul li a {
+  .nav-menu-active {
     display: block;
-    padding: 0.5rem;
-    color: #fff;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out;
   }
+}
 
-  .nav-menu ul li a:hover {
-    background-color: #444;
-  }
+/* Employee Registration Page styles */
+main {
+  padding: 20px;
+  margin-top: 70px;
+}
 
-  .hamburger-menu
+.registration-container {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.registration-container h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.registration-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.registration-form input[type
